@@ -60,18 +60,22 @@
             <a href="/about" class="text-white">من نحن</a>
         </li>  
         <li>
-            <a href="#" class="text-white">المنتجات</a>
+            <a href="/products" class="text-white">المنتجات</a>
         </li>
         <li>
-            <a href="#" class="text-white">تواصل معنا</a>
+            <a href="/contact" class="text-white">تواصل معنا</a>
         </li>
     </ul>
     </div>
 
     <a href="https://api.whatsapp.com/send?phone=972568660308&text=مرحبا!%20اريد%20الاستفسار%20عن%20المنتج%20من%20فضلك" id="fixedWhatsAppIcon" class="wow zoomIn" target="_blank">
     <i class='bx bxl-whatsapp'></i>
-</a>
+    </a>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

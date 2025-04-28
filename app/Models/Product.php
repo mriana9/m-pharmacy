@@ -1,13 +1,14 @@
 <?php
 
-namespace App;
-
-
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['title', 'image', 'price', 'category_id'];
+    use HasFactory;
+
+    // The fields that can be mass-assigned
+    protected $fillable = ['name', 'description', 'price', 'image'];
 }

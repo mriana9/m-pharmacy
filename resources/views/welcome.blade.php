@@ -27,14 +27,14 @@
             <div class="py-5 text-center text-dark">
                 <h1 class="">مرحباً بكم في صيدلية المعتز</h1>
                 <p class="lead">وجهتك الأولى لكل ما تحتاجه من أدوية، مكملات غذائية، ومستحضرات التجميل.</p>
-                <a href="#" class="btn btn-light btn-lg mt-3">تصفح المنتجات</a>
+                <a href="/products" class="btn btn-light btn-lg mt-3">تصفح المنتجات</a>
             </div>
             </div>
         </section>
         <!--/main-content-->
 
-        <!--services-->
-        <section class="services my-2 pb-5">
+         <!--services-->
+         <section class="services my-2 pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1 col-md-2 col-lg-3">
@@ -70,8 +70,8 @@
         </section>
         <!--/services-->
 
-        <!--about-us-->
-        <section class="about-us py-5">
+         <!--about-us-->
+         <section class="about-us py-5">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6">
@@ -88,7 +88,6 @@
         </section>
         <!--/about-us-->
 
-
         <!--banner-->
         <div class="banner">
             <div class="container">
@@ -104,32 +103,31 @@
         </div>
         <!--/banner-->
 
-                
         <!--products-->
         <section class="products py-5">
             <div class="container">
                 <h2 class="text-center mb-5">+ 1,000 منتج صيدلي يوميًا!</h2>
                 <div class="row">
-
-                @foreach ($products as $product)
-                    <div class="col-md-3 mb-4">
-                    <a href="{{ route('product.show', $product->id) }}" class="text-decoration-none text-dark">
-                    <div class="product-box border-bottom">
-                                <img src="{{ Voyager::image($product->image) }}" alt="{{ $product->title }}">
-                                <div class="card-body">
-                                    <h5 class="title">{{ Str::limit($product->title, 20) }}</h5>
-                                    <p class="price">شيكل{{ $product->price }}</p>
-                                    <div class="d-flex justify-content-end align-items-center gap-2"> 
-                                        <span> المزيد من التفاصيل </span>
-                                        <i class='bx bx-right-arrow-alt' ></i>
+                    @foreach ($products as $product)
+                        <div class="col-md-3 mb-4">
+                        <a href="{{ route('product.details', $product->id) }}" class="text-decoration-none text-dark">
+                            <div class="product-box border-bottom">
+                                    <img src="{{ Voyager::image($product->image) }}" alt="{{ $product->title }}">
+                                    <div class="card-body">
+                                        <h5 class="title">{{ Str::limit($product->name, 25) }}</h5>
+                                        <p class="price">شيكل{{ $product->price }}</p>
+                                        <div class="d-flex justify-content-end align-items-center gap-2"> 
+                                            <span> المزيد من التفاصيل </span>
+                                            <i class='bx bx-right-arrow-alt' ></i>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                         </a>
-                    </div>
-                @endforeach
-
-
+                        </div>
+                    @endforeach
+                </div>
+                <div class="d-flex justify-content-center my-2">
+                    <a href="/products" class="btn btn-primary mx-auto btn-lg mt-3">المزيد المنتجات</a>
                 </div>
             </div>
         </section>

@@ -17,12 +17,19 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 }
-
+a.btn,
 button {
     background-color: #24aeb1 !important;
     color: #fff !important;
     padding: 10px 20px !important;
     border: none !important;
+}
+
+button.btn-outline-primary{
+    background-color: #fff !important;
+    color: #24aeb1 !important;
+    padding: 10px 20px !important;
+    border: 1px solid #24aeb1 !important;
 }
 
 header .top-header {
